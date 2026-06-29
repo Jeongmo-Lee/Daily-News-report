@@ -16,6 +16,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install dependencies
+        run: pip install deep-translator
+
       - name: Run news email script
         env:
           GMAIL_SENDER: ${{ secrets.GMAIL_SENDER }}
